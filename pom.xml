@@ -169,6 +169,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <netty.build.version>22</netty.build.version>
     <jboss.marshalling.version>1.4.11.Final</jboss.marshalling.version>
+    <fst.version>2.57</fst.version>
     <jetty.alpnAgent.version>2.0.7</jetty.alpnAgent.version>
     <jetty.alpnAgent.path>"${settings.localRepository}"/org/mortbay/jetty/alpn/jetty-alpn-agent/${jetty.alpnAgent.version}/jetty-alpn-agent-${jetty.alpnAgent.version}.jar</jetty.alpnAgent.path>
     <argLine.common>
@@ -271,6 +272,15 @@
         <groupId>org.jboss.marshalling</groupId>
         <artifactId>jboss-marshalling</artifactId>
         <version>${jboss.marshalling.version}</version>
+        <scope>compile</scope>
+        <optional>true</optional>
+      </dependency>
+
+      <!-- FST serialization - completely optional -->
+      <dependency>
+        <groupId>de.ruedigermoeller</groupId>
+        <artifactId>fst</artifactId>
+        <version>${fst.version}</version>
         <scope>compile</scope>
         <optional>true</optional>
       </dependency>
